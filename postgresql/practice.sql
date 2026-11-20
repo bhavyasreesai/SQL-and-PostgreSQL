@@ -14,3 +14,9 @@ SELECT * FROM employees WHERE name NOT ILIKE '%i%';
 SELECT * FROM employees WHERE department IN('IT','HR')  AND  salary BETWEEN 45000 AND 75000 ORDER BY salary DESC;
 SELECT * FROM employees WHERE city != 'Chennai' ORDER BY salary DESC LIMIT 3;
 SELECT * FROM employees ORDER BY department ASC AND name ASC;
+
+
+
+SELECT * FROM employees WHERE name LIKE 'R%' OR name ILIKE '%a';
+SELECT * FROM employees WHERE department = 'IT' AND salary >60000 ORDER BY salary DESC;
+SELECT * FROM employees ORDER BY salary DESC LIMIT 1 OFFSET 2;
