@@ -1,0 +1,16 @@
+Table users {
+  id integer [pk, increment]
+  username varchar
+}
+
+Table comments {
+  id integer [pk, increment]
+  contents varchar
+  user_id int [ref: > users.id]
+  post_id int [ref: > posts.id]
+}
+
+Table posts {
+  id integer [pk, increment]
+  title varchar
+}
